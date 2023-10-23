@@ -1,0 +1,191 @@
+body {
+    margin: 20px;
+    background-color: #f9e1e0;
+}
+
+#skip {
+    position: absolute;
+    top: -100px;
+    left: -1000000px;
+}
+
+nav {
+    border: 2px solid black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav li {
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    border: solid 1px black;
+}
+
+nav li.active { 
+    background-color: 	#feadb9;
+}
+
+a {
+    text-decoration: underline;
+    color: purple;
+}
+
+a:hover {
+    color: blue;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding-top: 30px;
+}
+
+h3 {
+    font-size: 25px;
+    color: #4a7ba6;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-top: 15px;
+
+}
+p {
+    line-height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+figure {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+figure img {
+    display: block;
+    margin: auto;
+}
+
+li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.main_food {
+    padding-top: 10px;
+    display: block;
+    margin: auto;
+}
+
+.ingredient, .likes {
+    list-style-type: circle;
+    padding: 0;
+}
+
+ol {
+    list-style-type: lower-roman;
+    padding: 0;
+}
+
+ol li, .ingredient li, .likes li {
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.additional_food {
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+
+.thumbnail {
+    display: block;
+    margin: auto;
+    padding: 5px 0;
+}
+
+@media screen and (min-width: 768px) {
+    figure {
+        display: inline-block;
+        margin: 0 10px; 
+        text-align: center;
+    }
+
+    figcaption {
+        margin-top: 10px;
+    }
+
+    #skip {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+    }
+
+    .thumbnail {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    h1 {
+        position: absolute;
+        left: 0;
+        animation: mymove 4s ease-in-out 5 alternate forwards;
+    }
+
+    h2 {
+        padding-top: 80px;
+    }
+
+    @keyframes mymove {
+        0% {
+            left: 0;
+        }
+        50% {
+            left: calc(100% - 150px); 
+        }
+        100% {
+            left: calc(50% - 50px);
+        }
+    }
+
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    h1 {
+        animation: none;
+    }
+    #gif {
+        display: none;
+    }
+}
